@@ -1,0 +1,18 @@
+@import "../../assets/scss/constant";
+
+.loader {
+  border: 2px solid transparent;
+  border-top-color: $green;
+  border-bottom-color: $crimson;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  animation: 1s loader linear infinite;
+  transition: all;
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}

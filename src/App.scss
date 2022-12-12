@@ -1,0 +1,86 @@
+@import "assets/scss/constant";
+
+* {
+  box-sizing: border-box;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+
+  li {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    list-style: none;
+    font: bolder 1rem Arial, sans-serif;
+    color: black;
+  }
+
+  li:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+
+  li:has(> a.active) {
+    background: $green;
+    color: aliceblue;
+  }
+}
+
+.wrapper {
+  max-width: 87.5rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+.search-container {
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .search-result {
+    width: 100%;
+
+    li {
+      list-style: square;
+      color: $crimson;
+
+      .text {
+        color: black;
+      }
+    }
+  }
+}
+

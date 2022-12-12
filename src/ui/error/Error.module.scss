@@ -1,0 +1,21 @@
+@import "../../assets/scss/constant";
+
+.error {
+  display: block;
+  border: 2px solid $crimson;
+  border-radius: .5rem;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+
+  h4 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 1rem 0;
+    color: $crimson;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
