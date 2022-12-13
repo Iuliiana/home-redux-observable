@@ -1,7 +1,24 @@
+@import "../../assets/scss/constant";
+
 .buttonDefault {
-    padding: 5px 20px;
-    outline: none;
-    border: 2px solid #282c34;
-    background: rgba(13, 110, 253, 0.43);
-    font-size: 14px;
+  padding: .5rem 2rem;
+  outline: none;
+  border: 2px solid #282c34;
+  background: rgba(13, 110, 253, 0.43);
+  font-size: 14px;
+  cursor: pointer;
+  transition: .3s all;
+}
+
+.restart {
+  margin: 1rem auto;
+  border-radius: .5rem;
+  border: none;
+  color: white;
+  background: $crimson;
+}
+
+
+.restart:hover {
+  background: $green;
 }

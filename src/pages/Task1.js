@@ -16,7 +16,7 @@ const Task1 = () => {
             {hasQuery && loading && <Preloader/>}
             {hasQuery && !loading && collection.length === 0 && !error && <div>No result</div>}
             {error
-                ? <Error {...error} className="default"/>
+                ? <Error {...error}/>
                 : <ul className="search-result">
                     {collection.map((skill) => <li key={skill.id}><span className="text">{skill.name}</span></li>)}
                 </ul>}

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .d-flex {
   display: flex;
@@ -43,9 +48,7 @@ header {
   }
 
   a {
-    text-decoration: none;
     display: block;
-    color: inherit;
   }
 
   li:has(> a.active) {
@@ -80,6 +83,83 @@ h1 {
       .text {
         color: black;
       }
+    }
+  }
+}
+
+.services-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table.services {
+  width: 100%;
+  text-align: left;
+  border: 1px solid $green;
+
+  caption {
+    margin-bottom: 2rem;
+    font: 700 2rem Arial, sans-serif;
+  }
+
+  th {
+    color: $green;
+  }
+
+
+  td a, th {
+    padding: 0.5rem;
+    border: 1px solid $green;
+  }
+
+  td:not(.link) {
+    border: 1px solid $green;
+  }
+
+  .link {
+    transition: .3s all;
+  }
+
+  .link:hover {
+    background-color: rgba(233, 30, 99, 0.1);
+  }
+
+  td > a {
+    display: block;
+  }
+
+  td > a:hover {
+    display: block;
+  }
+
+}
+
+.service-detail {
+  max-width: 50rem;
+  margin: 0 auto;
+
+  h5 {
+    font-size: 2rem;
+  }
+
+  h5 > b {
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 3rem;
+    border-radius: 50%;
+    border: 4px solid $green;
+  }
+
+  p {
+    font-size: 1.5rem;
+
+    span {
+      font-size: 2rem;
     }
   }
 }
