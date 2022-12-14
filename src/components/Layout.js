@@ -7,7 +7,7 @@ const Layout = () => {
                 <ul className="nav">
                     <li><NavLink className="nav-item" to='/'>services</NavLink></li>
                     <li><NavLink className="nav-item" to='/search'>search</NavLink></li>
-                    <li><NavLink className="nav-item" to='/task-2'>Task 2</NavLink></li>
+                    <li><NavLink className="nav-item" to='/news'>news</NavLink></li>
                 </ul>
             </header>
 

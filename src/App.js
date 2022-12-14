@@ -4,7 +4,7 @@ import {Layout} from "./components/Layout";
 import {Services} from "./pages/Services";
 import {Notfound} from "./pages/Notfound";
 import {Task1} from "./pages/Task1";
-import {Task2} from "./pages/Task2";
+import {News} from "./pages/News";
 import ServicesDetail from "./pages/ServicesDetail";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
                     <Route path='/' index element={<Services/>}/>
                     <Route path='/:serviceId/details' element={<ServicesDetail/>}/>
                     <Route path='/search' index element={<Task1/>}/>
-                    <Route path='/task-2' index element={<Task2/>}/>
+                    <Route path='/news' index element={<News/>}/>
                     <Route path='*' element={<Notfound/>}/>
                 </Route>
 

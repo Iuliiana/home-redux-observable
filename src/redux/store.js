@@ -6,11 +6,14 @@ import {catchError} from "rxjs";
 import {ajax} from "rxjs/ajax";
 import servicesReducer from "./reducers/servicesReducer";
 import {getServicesDetailEpic, getServicesListEpic} from "./epics/servicesEpics";
+import {newsReducer} from "./reducers/newsReducer";
+import {getNewsListEpic} from "./epics/newsEpics";
 
 
 const reducer = combineReducers({
     skills: skillsReducer,
     services: servicesReducer,
+    news: newsReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -20,6 +23,7 @@ const epics = combineEpics(
     searchSkillsEpic,
     getServicesListEpic,
     getServicesDetailEpic,
+    getNewsListEpic
 );
 
 const rootEpic = (action$, store$, dependencies) =>
