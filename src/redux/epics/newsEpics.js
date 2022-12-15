@@ -1,5 +1,5 @@
 import {ofType} from "redux-observable";
-import {catchError, map, of, switchMap, retry, tap, retryWhen, timer, delayWhen} from "rxjs";
+import {catchError, map, of, switchMap,  retryWhen, timer, delayWhen} from "rxjs";
 import {NEWS_LIST_REQUEST} from "../actions/news/actionsType";
 import {geNewsListFail, geNewsListSuccess} from "../actions/news/actions";
 
