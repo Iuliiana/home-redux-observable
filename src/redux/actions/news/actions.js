@@ -1,5 +1,4 @@
 import {
-    DELETE_LAST_NEWS_ID,
     NEWS_LIST_FAIL,
     NEWS_LIST_REQUEST,
     NEWS_LIST_SUCCESS
@@ -15,9 +14,5 @@ export const geNewsListSuccess = (newsList) => ({
 
 export const geNewsListFail = (error) => ({
     type: NEWS_LIST_FAIL, payload: {error}
-});
-
-export const deleteLastNewsId = () => ({
-    type: DELETE_LAST_NEWS_ID, payload: {}
 });
 

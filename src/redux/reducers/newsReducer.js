@@ -1,5 +1,4 @@
 import {
-    DELETE_LAST_NEWS_ID,
     NEWS_LIST_FAIL,
     NEWS_LIST_REQUEST,
     NEWS_LIST_SUCCESS,
@@ -25,7 +24,7 @@ export const newsReducer = (state = initialState, action) => {
             return {...state, lastNewsId: '', isLoading: true, error: null};
         case NEWS_LIST_SUCCESS:
             const {newsList} = action.payload;
-            const isEndData = newsList.length === 0 || newsList.length < 5;
+            const isEndData = newsList.length === 0 || newsList.length < NEWS_LIMIT;
             return {
                 ...state,
                 newsList: [...state.newsList, ...newsList],
@@ -37,8 +36,6 @@ export const newsReducer = (state = initialState, action) => {
         case NEWS_LIST_FAIL:
             const {error} = action.payload;
             return {...state, isLoading: false, error: error};
-        case DELETE_LAST_NEWS_ID:
-            return;
         default:
             return state;
     }
