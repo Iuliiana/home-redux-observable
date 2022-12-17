@@ -8,6 +8,7 @@ import NewsItemActivity from "./NewsItemActivity";
 
 const NewsItem = (props) => {
     const isAttachments = props.attachments !== [] || props.attachments !== null;
+    const activityTypes = ['likes', 'comments', 'reposts', 'views'];
 
     return (
         <div className="news-item">
@@ -27,12 +28,15 @@ const NewsItem = (props) => {
                 isAttachments && props.attachments.map(attach => <NewsItemAttachment key={uuid()} {...attach}/>)
             }
 
-
             <div className="news-item-activity d-flex align-items-center">
                 {
-                    ['likes', 'comments', 'reposts', 'views'].map(activity => <NewsItemActivity key={uuid()}
-                                                                                                type={activity}
-                                                                                                count={props[activity]?.count}/>)
+                    activityTypes.map((activity) => {
+                       return <NewsItemActivity
+                            key={uuid()}
+                            type={activity}
+                            count={props[activity]?.count}
+                        />
+                    })
                 }
             </div>
         </div>
