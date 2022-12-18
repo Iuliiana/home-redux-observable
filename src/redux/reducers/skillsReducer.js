@@ -22,7 +22,7 @@ export default function skillsReducer(state = initialState, action) {
             return {...state, collection: [], loading: true, error: null}
         case SEARCH_SKILLS_SUCCESS:
             const {collection} = action.payload;
-            return {...state, collection: collection, loading: false, error: null};
+            return {...state, collection: collection || [], loading: false, error: null};
         case SEARCH_SKILLS_FAILURE:
             const {error} = action.payload;
             return {...state, collection: [], loading: false, error};
